@@ -1,0 +1,40 @@
+body{
+    text-align: center;
+    margin: 30px;
+    padding: 30px;
+}
+th{
+    background-color: rgb(224, 199, 247);
+    width:25%
+}
+ table{
+     width: 100%;
+
+ }
+
+.class{
+    border: 6px solid red;
+    border-radius: 5px;
+    padding: 3rem;
+    background-color: rgb(250, 168, 114);
+}
+
+.orange{
+    background-color: orange;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color:green;
+}
+
+.option :hover{
+    pointer-events: none;
+}
