@@ -14,7 +14,7 @@ let timeLeft = TIME_START;
 let timerInterval = null; // dichiarazione della variabile x setInterval
 
 function formatTime(time) {
-  let minutes =`0${Math.floor(time / 60)}`; //cosi' c'è sempre 0 davanti
+  let minutes =`0${Math.floor(time / 60)}`; //cosi' c'è sempre 0 davanti //Math.floor:= arrotonda x difetto
   let seconds = time % 60;
   if (seconds < 10) {                       //cosi' c'è sempre 0 davanti
     seconds = `0${seconds}`;
