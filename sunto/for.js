@@ -7,3 +7,19 @@ for(const index in tab){
 for(const value of tab){
     console.log(`${value} est là`)
 }
+
+//Make the loop stop when i is 5.
+for (i = 0; i < 10; i++) {
+    console.log(i);
+    if (i == 5) {
+        break;
+    }
+}
+
+//Make the loop jump to the next iteration when i is 5.
+for (i = 0; i < 10; i++) {
+    if (i == 5) {
+        continue;
+    }
+    console.log(i);
+}

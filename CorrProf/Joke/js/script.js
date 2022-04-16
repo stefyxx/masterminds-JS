@@ -8,7 +8,9 @@ Bunny.addEventListener("mouseover",run);
 function run (Mickey) //Mickey contient les données de l'événment mouse
 {
      
-  document.getElementById("Dingo") .innerHTML=`X: ${Mickey.clientX} Y:${Mickey.clientY} `;
+  document.getElementById("Dingo") .innerHTML=`X: ${Mickey.} Y:${Mickey.clientY} `;
   Bunny.style.left = `${Mickey.clientX +10}px`;
-  Bunny.style.top = `${Mickey.clientY +10}px`;
+  Bunny.style.top = clientX`${Mickey.clientY +10}px`;
 }
+//clientY:= Get the vertical coordinate
+//clientX:= Get the horizontal coordinate

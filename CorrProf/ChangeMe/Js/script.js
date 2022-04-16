@@ -7,7 +7,7 @@
 //     //J'empêche le formulaire d'être envoyé
 //     event.preventDefault();
 //     let div =document.getElementById("square");
-    
+
 
 //     //Mon formulaire
 //     let monForm =document.forms[0];
@@ -24,7 +24,7 @@
 //     {
 //         div.setAttribute("class","YellowSquare");
 //     }
-    
+
 //     if(strCouleur=="Red")
 //     {
 //         div.setAttribute("class","RedSquare");
@@ -33,24 +33,22 @@
 
 /*En directe pour le select*/
 let leselect = document.getElementById("SelColor");
-leselect.addEventListener("change",setColor);
+leselect.addEventListener("change", setColor);
 
-function setColor(event)
-{ 
-    let div =document.getElementById("square");
-   let strCouleur = event.currentTarget.value;
+function setColor(event) {
+    let div = document.getElementById("square");
+    let strCouleur = event.currentTarget.value; 
+    // per recuperare 'value' di 'option' memorizzato in 'select'
+    // (in rearltà posso usarla anche x altri tag -> currentTarget)
 
-    if(strCouleur=="Green")
-        {
-            div.setAttribute("class","GreenSquare");
-        }
-        if(strCouleur=="Yellow")
-        {
-            div.setAttribute("class","YellowSquare");
-        }
-        
-        if(strCouleur=="Red")
-        {
-            div.setAttribute("class","RedSquare");
-        }
+    if (strCouleur == "Green") {
+        div.setAttribute("class", "GreenSquare");
+    }
+    if (strCouleur == "Yellow") {
+        div.setAttribute("class", "YellowSquare");
+    }
+
+    if (strCouleur == "Red") {
+        div.setAttribute("class", "RedSquare");
+    }
 }
