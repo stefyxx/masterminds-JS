@@ -1,0 +1,41 @@
+body{
+    
+}
+
+.blocCouleurs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: burlywood;
+    border: solid 2px brown;
+    border-radius: 10px;
+    width: 30em;
+    height: 15em;  
+}
+
+#proposition{
+    background-color: cornsilk;
+    width: 10em;
+    height: 4em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: auto;
+    /* vertical-align: middle; */
+}
+
+.ListeCouleurs{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2em;
+}
+
+.codeCouleur:hover{
+    cursor: pointer;
+}
+
+#couleursChoisies{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

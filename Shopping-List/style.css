@@ -1,0 +1,100 @@
+body {
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body > table{
+    width: 50%;
+    font-size: 45px;
+}
+
+table{
+    border-collapse: collapse;
+}
+table.list{
+    width:100%;
+}
+
+td, th {
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 8px;
+    text-align: left;
+}
+tr:nth-child(even),table.list thead>tr {
+    background-color: #e9d9fc;
+}
+
+input[type=text] {
+    width: 100%;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+  
+input[type=text]:focus {
+    background-color: #e9d9fc;
+}
+
+input[type=submit] {
+    width: 30%;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #e9d9fc;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    padding:10px 18px;
+    margin: 20px 0 10px 0; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.export-action-buttons {
+    text-align: center;
+}
+
+form div.form-action-buttons{
+    text-align: center;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0000ee;
+    margin-right: 4px;
+}
+
+label.validation-error{
+    color:   red;
+    margin-left: 5px;
+}
+
+.hide{
+    display:none;
+}
+
+.title {
+    text-align: center;
+}
+
+.shopping-form {
+    border-style: solid;
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+}
+
+.shopping-table {
+    border-style: solid;
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+}

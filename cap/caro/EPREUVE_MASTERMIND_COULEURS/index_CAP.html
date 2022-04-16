@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITRE ONGLET -->
+    <title>ÉPREUVE MASTERMIND</title>
+
+    <!-- LIEN CSS -->
+    <link rel="stylesheet" href="style_CAP.css">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="contenuGeneral">
+
+    <header class="hautPage">
+        <!-- TIMER -->
+        <article class="temps">
+            <div class="timer">
+                <!-- <span >Temps restant : </span> -->
+                <div id='timer'></div>
+            </div>
+        </article>
+
+        <!-- TITRE -->      
+        <h1 class="titre">Épreuve MASTERMIND</h1>      
+    </header>
+    
+
+    <!-- BOUTON JOUER -->
+    <section class="boutonsJouer">
+        <div class="Rejouer">
+            <input class = "shadow hover" type="button" value="Rejouer" id="Replay" hidden>    
+        </div>
+        
+        <div class="accueil">
+            <input class = "shadow hover" type="button" value="Jouer" id="play">    
+        </div>
+    </section>
+
+    <!-- PLATEAU JEU -->
+    <section id="Jeu" hidden>
+        <div class="choixCouleurs" id="choixCouleurs">
+        </div>
+        <br>
+        <div class="submition">
+            <input type="text" value="" id="codeJoueur" maxlength="4" readonly>
+            <input type="submit" value="Submit" id="submit" class="hover shadow">
+            <input type="button" value="Delete" id="delete" class="hover shadow">
+            <div id="messageSubmit"> </div> 
+        </div>
+        
+        <div id="essaiRestant">
+            Essais restants : <span id="essai"></span>
+        </div>
+
+        <div class="plateauJeu">
+        <div class="finJeu">
+            <div id="resultat"></div>
+            <div id="reponseOrdi"></div>
+        </div>
+            
+        <div class="colonnePropositions" id="colonnePropositions">
+        </div>
+            
+        </div>
+    </section>
+
+</div>    
+
+    <!-- LIEN JAVASCRIPT -->
+    <script src="script_CAP.js"></script>
+</body>
+</html>

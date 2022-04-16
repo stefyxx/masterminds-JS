@@ -1,0 +1,21 @@
+.carreBleu {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border: solid red 5px;
+}
+
+.carreRouge {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: solid blue 5px;
+    }
+    
+button{
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+}

@@ -1,0 +1,90 @@
+body {
+    margin: 100px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    position: relative;
+
+}
+
+h2, h3 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Racing Sans One', cursive;
+    position: relative;
+    font-size: 3rem;
+}
+h1::after {
+    content: "[ MASTERMIND - THE GAME ]";
+    color: pink;
+    z-index: -1;
+    position: absolute;
+    top: 60%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 70px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: black;
+    padding: 10px 20px;
+    border: 2px solid white;
+    cursor: pointer;
+    color: white;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+main {
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+}
+
+.constance {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+    background-color: white;
+    color: black;
+    padding: 30px 0;
+}
+
+.select {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+select {
+    padding: 5px 10px;
+    border: 1px solid white;
+}
+
+option {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.s {
+    margin: 0 15px;
+}
+
+.past-attempt {
+    margin-top: 60px;
+}
+
+#message {
+    padding-top: 30px;
+}

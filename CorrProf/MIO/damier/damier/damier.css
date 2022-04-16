@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    margin: 30px;
+    padding: 30px;
+}
+table { 
+    display: table;
+    border-collapse:collapse;
+    border-spacing: 200px;
+    border-color: red;
+  }
+
+  /* .class_tr : classe dei tr */
+  .class_th{
+      border: 6px solid red;
+      border-radius: 5px;
+      padding: 3rem;
+      background-color: rgb(250, 168, 114);
+  }
+
+  

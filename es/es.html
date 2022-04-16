@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo JQUERY</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="demo.js"></script>
+    <script>
+
+        // Fonctions anonymes
+        // window.onload = function () {
+        //     let h1 = document.getElementsByTagName("h1")[0];
+        //     h1.innerHTML = "<b>Au revoir les WAD</b>";
+        // }
+        // Fonctions lambda
+        // window.onload = () => {
+        //     let h1 = document.getElementsByTagName("h1")[0];
+        //     h1.innerHTML = "<b>Au revoir les WAD</b>";
+
+        //     [1,2,3,4,5,6,7,8,9].map((x) => x * x).forEach(y => console.log(y));
+        
+        // }
+
+       
+
+    </script>
+</head>
+
+<body class="container">
+    <h1>Bonjour les WAD</h1>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script>
+        $("body").append("<h2>Titre h2</h2>");
+
+        // console.log($('li'));
+
+        let obj = {
+            "prop1": 1,
+            "prop2": "Greg"
+        };
+
+        for (const key in obj) {
+            console.log(key + " " + obj[key]);
+            // KEY = index ou clé || obj[KEY] = valeur
+        }
+        
+        // $('li').each((i, li) => console.log(li.innerHTML));
+       
+    </script>
+    <script src="testJQuery.js"></script>
+</body>
+    
+</html>

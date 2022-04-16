@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+    display: flexbox;
+    flex-direction: column;
+    justify-content: space-around;
+}
+p{
+    margin: 30px;
+    padding: 20px;
+    border: 3px dotted darkcyan;
+    border-radius: 20px;
+}

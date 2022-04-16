@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+.chrono{
+    font-family: 'Stick No Bills', sans-serif;
+    border: solid white 2px;   
+    margin: 30px;
+    padding: 1em;
+}
+
+.boum{
+    background-color: red;
+    color: gold;
+}

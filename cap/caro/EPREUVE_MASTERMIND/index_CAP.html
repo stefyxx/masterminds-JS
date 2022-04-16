@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÉPREUVE MASTERMIND</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="contenuGeneral">
+    <div class="temps">
+        <span>Temps restant : </span>
+        <div id='timer'></div>
+    </div>
+
+    <h1>Épreuve MASTERMIND</h1>
+
+    <div class="accueil">
+        <input type="button" value="JOUER" id="play">    
+    </div>
+
+    <div id="plateauJeu" hidden>
+        <!-- <div class="choixCouleurs">
+            <form action="index.html" method="post">
+                <select name="selColor" id="selColor1">
+                    <option class="red" value="Red">1</option>
+                    <option class="green" value="Green">2</option>
+                    <option class="yellow" value="Yellow">3</option>
+                    <option class="blue" value="Blue">4</option>
+                </select>
+            </form>   
+            <form action="index.html" method="post">
+                <select name="selColor" id="selColor2">
+                    <option class="red" value="Red">1</option>
+                    <option class="green" value="Green">2</option>
+                    <option class="yellow" value="Yellow">3</option>
+                    <option class="blue" value="Blue">4</option>
+                </select>
+            </form> 
+            <form action="index.html" method="post">
+                <select name="selColor" id="selColor3">
+                    <option class="red" value="Red">1</option>
+                    <option class="green" value="Green">2</option>
+                    <option class="yellow" value="Yellow">3</option>
+                    <option class="blue" value="Blue">4</option>
+                </select>
+            </form> 
+            <form action="index.html" method="post">
+                <select name="selColor" id="selColor4">
+                    <option class="red" value="Red">1</option>
+                    <option class="green" value="Green">2</option>
+                    <option class="yellow" value="Yellow">3</option>
+                    <option class="blue" value="Blue">4</option>
+                </select>
+            </form>  
+        </div> -->
+        <br>
+        <div class="submition">
+            <span>Introduisez un code de 4 chiffres de 1 à 4 :  </span> 
+            <input type="text" value="" id="codeJoueur" maxlength="4">
+            <input type="submit" value="Submit" id="submit">
+            <span id="messageSubmit"></span> 
+        </div>
+        
+        <div id="essaiRestant">
+            Essais restants : <span id="essai"></span>
+        </div>
+
+        <div class="finJeu">
+            <div id="resultat">Résultat</div>
+            <div id="reponseOrdi"> Propositions Joueur</div>
+        </div>
+            
+        <div class="colonnePropositions" id="colonnePropositions">
+            
+        </div>
+    </div>
+
+</div>    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+#enonce{
+    font-style: italic;
+    padding: 5em;
+    text-align: center;
+
+}
+
+#damier{
+    margin: auto;
+    text-align: center;
+}
+
+div{
+    margin: -1em;
+    padding: 0;
+}
+
+.damierBleu{
+    width: 8em;
+    height: 8em;
+    background-color: blue;
+    border: solid darkblue;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.damierRouge{
+    width: 8em;
+    height: 8em;
+    background-color: rgb(255, 0, 0);
+    border: solid rgb(139, 0, 0);
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}

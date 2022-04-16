@@ -1,0 +1,184 @@
+/* FONTS  */
+@font-face {
+    font-family: alarm_clock;
+    src: url(./fonts/alarm_clock.ttf);
+}
+@font-face {
+    font-family: Press_Start;
+    src: url(./fonts/PressStart2P-Regular.ttf);
+}
+@font-face {
+    font-family: Bangers;
+    src: url(./fonts/Bangers-Regular.ttf);
+}
+@font-face {
+    font-family: Patrick_Hand;
+    src: url(./fonts/PatrickHand-Regular.ttf);
+}
+
+:root{
+    --font-alarm : 'alarm_clock';
+    --font-title : 'Bangers';
+    --font-body : 'Patrick_Hand';
+    --color-dark : black;
+    --color-light : wheat;
+    --color-error : red;
+}
+
+h1{
+    font-family: var(--font-title);
+    font-size: 5em;
+    text-align: center;
+    letter-spacing: 5px;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*TIMER*/
+.temps{
+    border: solid var(--color-dark) 0.5em;
+    border-radius: 50%;
+    width: 6em;
+    height: 6em;
+    font-family: var(--font-alarm);
+    font-size: 1.5em;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+.timer {
+    text-align: center;
+    height: 6em;
+    line-height: 6em;
+}
+
+/* ACCUEIL PLAY */
+.accueil{
+    text-align: center;
+}
+#play{
+    font-family: 'Press_Start';
+    font-size: 36px;
+    padding: 0.75em;
+}
+#play:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.541) 5px 10px 8px;
+}
+
+/* PLATEAU JEU */
+#Jeu{
+    font-family: var(--font-body); 
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* CODE JOUEUR */
+
+.submition{
+    text-align: center;
+    font-size: 1.5em;
+}
+#codeJoueur{
+    font-size: 1em;
+    text-align: center;
+    font-family: var(--font-body); 
+
+}
+#submit{
+    font-family: 'Press_Start';
+    font-size: 15px;
+    margin-left: 1em;
+    padding: 0.75em;
+}
+.hover:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.541) 5px 10px 8px;
+}
+
+.plateauJeu{
+    border-radius: 50px;
+    border : 2px solid var(--color-dark);
+    background-color: var(--color-dark);
+    width: 100%;
+    min-height: 250px;
+    margin-top : 1em;
+}
+/* CHOIX COULEUR
+.choixCouleurs{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+#selColor{
+    width: 300px;
+    height: 50px;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+#submit{
+    border-radius: 10px;
+} */
+
+
+/* FIN JEU */
+.finJeu{
+    display: flex;
+    height: 3em;
+    color: var(--color-light);
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5em;
+
+}
+#resultat, #validation{
+    text-align: center;
+}
+
+.texteRouge{
+    color: var(--color-error);
+}
+
+/* PROPOSITIONS */
+.colonnePropositions{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.ligneProposition{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 15px;
+    width: 100%;
+    margin: 10px;
+}
+#proposition, #validation{
+    background-color: var(--color-light);
+    min-height: 5px;
+    width: 40%;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.25em;
+    border-radius: 15px;
+}
+
+#messageSubmit{
+    color: var(--color-error);
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="mastermind.css">
+</head>
+<body>
+    <div class = "contenuGlobal">
+        <div class="regles">
+            <h1>Le jeu du Mastermind 🔴🟠🟡🟢🔵🟣🟤⚫</h1>
+            <div>Créez une application web permettant à un joueur d’affronter l’ordinateur au jeu du Mastermind.<br>
+            Règle du jeu : En début de partie, parmi 8 couleurs, l’ordinateur sélectionne 4 couleurs différentes pour composer un code couleur ordonné. Ensuite, le joueur se doit de définir lui aussi un code de 4 couleurs dans le but de deviner celui de l’ordinateur. Si  le  joueur  trouve  le  code  dans  le  bon  ordre,  il  gagne.<br>
+            Par  contre,  si  celui-ci  commet  une  erreur, l’ordinateur se doit de donner des indices. <br>
+            <ul>
+                Exemple : 
+                <li>Code à deviner : 🔴🟠🟡🟢</li>
+                <li>Code entré : 🔴🔵🟣🟠</li>
+                <li>Indices : « 1 couleur(s) est au bon endroit, 1 autre(s) n’est pas à sa place. »</li>
+            </ul>
+        </div>
+
+        <div class="game">
+            <div id="blocReponse"> </div>
+            <div class="blocCouleurs">
+                <div><h4>Choisi 4 couleurs :</h4></div>
+                <div class="ListeCouleurs">
+                    <div class="codeCouleur codeRouge" id="rouge">🔴</div>
+                    <div class="codeCouleur codeOrange" id="orange">🟠</div>
+                    <div class="codeCouleur codeJaune" id="jaune">🟡</div>
+                    <div class="codeCouleur codeVert" id="vert">🟢</div>
+                    <div class="codeCouleur codeBleu" id="bleu">🔵</div>
+                    <div class="codeCouleur codeMauve" id="mauve">🟣</div>
+                    <div class="codeCouleur codeBrun" id="brun">🟤</div>
+                    <div class="codeCouleur codeNoir" id="noir">⚫</div>
+                </div>
+                <div>
+                    <div id="proposition">
+                        <span>Proposition Joueur : </span>
+                        <div id="couleursChoisies"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+        <script src="mastermind.js"></script>
+</body>
+</html>

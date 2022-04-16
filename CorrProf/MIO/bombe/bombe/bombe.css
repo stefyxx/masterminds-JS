@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+    color: white;
+    font-size:10rem;
+    text-align: center;
+    margin-top:10rem; 
+}
+
+.start{
+    color: rgb(245, 245, 109);
+}
+.alarm{
+    color: rgb(238, 16, 16);
+}
