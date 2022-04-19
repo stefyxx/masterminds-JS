@@ -77,4 +77,47 @@ function refreshStudentList() {
 }
 
 addStudent(1, refreshStudentList);
+// test
 
+let a = 1;
+let b = "2";
+let c = null;
+//console.log("risultato"+ a&&b&&c);
+
+function getDateFromUtcEpoch(epoch) {
+    let data = new Date(epoch * 1000);
+    return data;
+}
+
+function getDateFromTimestamp(timestamp) {
+    let data = new Date(timestamp);
+    return data;
+}
+//console.log(getDateFromUtcEpoch(1234567));
+
+var arrMap = new Map([
+    [1, 'ONE'],
+    [2, 'TWO']
+]);
+
+var arr1Map = new Map(
+    arr.map(object => {
+        return [object.key, object.val];
+    }),
+);
+
+int random(){
+    return (rand() % 2);
+}
+
+function rand() {
+    let nb = 0;
+
+    var essaye = Math.random() // n° tra 0 et 1
+    if (essaye < 0.25) {
+        nb = 1;
+    } else {
+        nb = 0;
+    }
+    return nb;
+}

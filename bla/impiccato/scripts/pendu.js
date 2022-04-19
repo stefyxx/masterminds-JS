@@ -106,3 +106,12 @@ function controlloLettera() {
 
     }
 }
+
+//cambio immagine se non indovini (bisogna chiamarla)
+function imageError(){
+    let img =document.getElementsByName('img');
+    let i=0;
+    console.log(img.getAttribute('src'));
+    //img.setAttribute('src','./images/pendu_'+ i +'.png');
+}
+imageError();
