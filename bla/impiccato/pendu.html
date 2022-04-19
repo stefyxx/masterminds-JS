@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/style.css" rel="stylesheet">
+    <title>Le Jeu du pendu</title>
+</head>
+<body>
+    <div>
+    <h1>Chi salverà l'impiccato?</h1>
+        <img src="images/pendu_7.png" />
+        <form id="pendu" name="pendu" method="post"><!--  onsubmit="penduValori()" -->
+            <span id="trovare" class="mot_a_trouver">Parola da trovare</span>
+            <span id="errors" class="erreurs">Lettere sbagliate</span>
+            <span id="info" class="info">Infos, Gagné, Perdu, etc</span>
+            <input type="text" id="proposition" name="proposition" placeholder="Proposez une lettre ou un mot" />
+            <input type="submit" id="submit" value="Proposer" />
+        </form>
+    </div>
+    <script src="scripts/pendu.js"></script>
+</body>
+</html>

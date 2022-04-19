@@ -3,7 +3,7 @@ const count = 10;
 const codeLength = 4;
 const timerDuration = 5; // en minute
 
-
+//ha 10 tentativi
 document.getElementById("count").innerText = count;
 
 // Afficher le jeu au click
