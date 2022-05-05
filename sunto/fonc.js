@@ -1,3 +1,10 @@
+//You can also call a function using this syntax: nomFunction.call().
+function hallo() {
+    alert("hallo");
+}
+hallo.call();
+
+/////////
 function greeting(name = "world") {
     console.log(`Hello, ${name}`);
 }
