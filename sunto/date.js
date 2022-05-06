@@ -50,19 +50,20 @@ switch (Date()) {
 // .getDay -> dimanche é 0 
 let week = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
 let day = new Date().getDay();
-console.log(`Bonjour, nous sommes ${week[day]}!`);var today = new Date();
-var dd = today.getDate();
+console.log(`Bonjour, nous sommes ${week[day]}!`);
+var todayi = new Date();
+var dd = todayi.getDate();
 
 //mese + 1
 var todayi = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; 
-var yyyy = today.getFullYear();
+var dd = todayi.getDate();
+var mm = todayi.getMonth()+1; 
+var yyyy = todayi.getFullYear();
 if(dd<10) dd='0'+dd;
 if(mm<10) mm='0'+mm;
 
 today = mm+'/'+dd+'/'+yyyy;
-console.log(today);
+console.log(todayi);
 
 //anno bisestile
 function leapyear(year)

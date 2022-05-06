@@ -121,3 +121,6 @@ function rand() {
     }
     return nb;
 }
+
+var x = 19.93;
+Math.ceil(x) // arrotonda per eccesso al numero intero più vicino. -> 20
