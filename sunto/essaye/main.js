@@ -17,6 +17,11 @@ console.log(reaction); //yikes
 console.log(reaction[0]); //y
 reaction[0] = 'l';
 console.log(reaction[0]); //y
+
+//let risultato = lettera.concat(frase.slice(1));
+let ris = 'l'.concat(reaction.slice(1));
+console.log(ris);
+
 /* Non possiamo cambiare i valori primitivi.
 Lo spiegherò con un piccolo esempio. Le stringhe (che sono Valori PRIMITIVI) e gli array (che non lo sono) hanno alcune somiglianze superficiali. Un array è una sequenza di elementi e una stringa è una sequenza di caratteri
 Ma i valori primitivi sono IMMUTABILI*/
@@ -32,8 +37,9 @@ for (let index = 0; index < arrReaction.length; index++) {
     //console.log(c);
 }
 console.log('c fuori :'+c); // c fuori :likes
-//NON ESISTER0 MAI UN METHOD DELLA STRINGA c ESTRERNO (es: c.listaLettere())
+//NON ESISTERA' MAI UN METHOD DELLA STRINGA c ESTRERNO (es: c.listaLettere())
 
+console.log("*************************");
 let pet = 'Narwhal';
 pet = 'The Kraken';
 console.log(pet);  //'The Kraken'  //MA POSSO CAMBIARE IL CONTENUTO DELLA STRING!!!
@@ -73,5 +79,37 @@ console.log(y);     //10
 /*let answer = true;
 answer.opposite = false;
 console.log(answer.opposite); //undefined*/
+console.log("*************************");
+var d = new Date(76,11,30,12,00); //la mia data di nascita
+console.log(d);
 
+function printTime() {
+    let d = new Date();
+    let h = d.getHours();
+    let m = d.getMinutes();
+    let s = d.getSeconds();
+    let hours,minutes,seconds = "";
+    hours = (h<12) ? "0"+h : h;
+    if(m==60) minutes ="00";
+    else if (m<10) minutes = "0"+m
+    else minutes = m;
 
+    seconds = (s<10) ? "0"+s : s;
+
+    document.body.innerHTML= hours + ":" + minutes + ":" + seconds;    
+}
+
+//setInterval(printTime,1000);
+
+console.log("*************************");
+/*let answer = prompt('Enter your name'); //prompt é un method che ritorna una stringa, 'answer' é una stringa -> dopo l'ok' del prompt, gli assegno un nuovo valore, ossia quello che ho scritto nel prompt:
+console.log(answer); //mi mette il contenuto di 'answer' (ovviamente string) , dopo che faccio 'ok'*/
+console.log("*************************");
+let shampoo;
+let soap = null;
+soap = shampoo;
+console.log(soap);  //undefined
+
+console.log("*************************");
+console.log(Date()); 
+console.log(new Date().getFullYear());

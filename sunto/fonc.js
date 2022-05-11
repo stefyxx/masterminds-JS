@@ -98,8 +98,8 @@ Personne.prototype.prenomEnMajuscules = function prenomEnMajuscules() {
 s.prenomEnMajuscules(); // "SIMON"
 
 // Méthode string qui renvoie une chaine de caractère à l'envers
-let s = "Simon";
-s.inverse();
+let es = "Simon";
+es.inverse();
 
 String.prototype.inverse = function inverse() {
     let r = "";
@@ -108,7 +108,7 @@ String.prototype.inverse = function inverse() {
     }
     return r;
 }
-s.inverse(); // "nomiS"
+es.inverse(); // "nomiS"
 
 //* Les fermetures
 function creerAdditionneur(a) {
@@ -120,3 +120,6 @@ let ajoute5 = creerAdditionneur(5);
 let ajoute20 = creerAdditionneur(20);
 ajoute5(6); // 11
 ajoute20(7); // 27
+
+console.log("*************************");
+

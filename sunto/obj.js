@@ -68,9 +68,14 @@ function person3(name, age) {
 }
 //bornYear é una funzione= method
 function bornYear() {
-    return 2016 - this.age;     // richiamo 'age' con this.
+    return new Date().getFullYear() - this.age;     // richiamo 'age' con this.
+
+    //NBB 'new' é un costruttore, quindi quandi appello la func 'bornYear()' -> JS crea l'obj Date() et appella 'age'; ma alla fine dell'esecuzione della funzione DATE E' DISTRUTTO (x! valori primitivi)
 }
 
 // ma per chiamare la prorpietà yearOfBirth SCRIVO ()
 var p3= new person3("Al", 22);
 p3.yearOfBirth();   //ho messo le ()
+
+//Nota: possiamo creare un obj, ma non possiamo distruggerlo; per questo un'app potrebbe usare molta memoria
+//pero' se creo un obj in una func, finito l'appello della func, cessa di vivere anche j'obj creato in essa, quindi é DISTRUTTO

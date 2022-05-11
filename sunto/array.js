@@ -10,7 +10,7 @@ console.log(a[3]);    //undefined
   // Faire quelque chose avec currentValue ou array[index]
 });
 
-// Méthodes array
+// Methods array
 a.push(item); // Ajouter un élément à un tableau
 a.toString() // Renvoie une chaîne composée des différents éléments auxquels on a appliqué toString(), séparés par des virgules.
 a.concat(item1[, item2[, ...[, itemN]]]) // Renvoie un nouveau tableau auquel on a ajouté les éléments.
