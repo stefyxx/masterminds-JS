@@ -70,12 +70,45 @@ function person3(name, age) {
 function bornYear() {
     return new Date().getFullYear() - this.age;     // richiamo 'age' con this.
 
-    //NBB 'new' é un costruttore, quindi quandi appello la func 'bornYear()' -> JS crea l'obj Date() et appella 'age'; ma alla fine dell'esecuzione della funzione DATE E' DISTRUTTO (x! valori primitivi)
+    //NBB 'new' é un costruttore, quindi quando appello la func 'bornYear()' -> JS crea l'obj Date() et appella 'age'; ma alla fine dell'esecuzione della funzione DATE E' DISTRUTTO (x! valori primitivi, poiché il 'return' é un' espressione)
 }
 
 // ma per chiamare la prorpietà yearOfBirth SCRIVO ()
-var p3= new person3("Al", 22);
+var p3 = new person3("Al", 22);
 p3.yearOfBirth();   //ho messo le ()
 
 //Nota: possiamo creare un obj, ma non possiamo distruggerlo; per questo un'app potrebbe usare molta memoria
 //pero' se creo un obj in una func, finito l'appello della func, cessa di vivere anche j'obj creato in essa, quindi é DISTRUTTO
+
+//giusto una nota per sottolineare la diff tra valore primitivo e non
+
+for (let index = 0; index < 3; index++) {
+    console.log(2);     //2 é type primitive -> la console punterà x 3 volte al n° 2
+}
+for (let index = 0; index < 3; index++) {
+    console.log({});     //{} NON é type primitive -> la console creerà 3 OBJ !!!
+}
+
+////// dove punta cosa:
+let bees = {};
+let peas = bees;
+let knees = {};
+/*
+bees -->{}
+         ^      bees et peas PUNTANOI LO STESSO obj
+peas   --|
+knees --> {}
+*/
+
+////// dove punta cosa: tree et flower fanno appello SEPARATAMENTE a plant 
+let plant = function () {
+    return {};
+};
+let tree = plant();
+let flower = plant();
+
+/*
+plant   --> ()
+tree    --> {}
+flower  --> {} 
+*/

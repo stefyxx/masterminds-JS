@@ -43,7 +43,7 @@ function countChars(elm) {
     return count;
 }
 
-// Exemple avec une IIFE "expression de fonction imédiatement invoquées"
+        // Exemple avec une IIFE "expression de fonction imédiatement invoquées"
 let charsInBody = (function counter(elm) {
     if (elm.nodeType == 3) { // TEXT_NODE
         return elm.nodeValue.length;
@@ -56,7 +56,7 @@ let charsInBody = (function counter(elm) {
 })(document.body);
 
 
-//* Fonctions lamda
+//2° //* Fonctions lamda
 
 hello = () => {
     return "Hello World!";
@@ -110,7 +110,9 @@ String.prototype.inverse = function inverse() {
 }
 es.inverse(); // "nomiS"
 
-//* Les fermetures
+console.log("*************************");
+
+//3° //* Les fermetures : possiamo ritornare anche una funzione !!!!
 function creerAdditionneur(a) {
     return function (b) {
         return a + b;

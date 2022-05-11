@@ -113,3 +113,14 @@ console.log(soap);  //undefined
 console.log("*************************");
 console.log(Date()); 
 console.log(new Date().getFullYear());
+
+console.log("*************************");
+
+let countDwarves = function() { return 7; };
+let dwarves = countDwarves;
+console.log(dwarves);           //ƒ () { return 7; } 
+//ci attenderemmo 7; ma  noi non abbiamo appellato la funzione
+//non dobbiamo dimenticare che dwarves punta al valore 'function() { return 7; }' e non all'appello !!!
+
+let dwarvess = countDwarves();  // () is a function call
+console.log(dwarvess);          // 7   !!!!
