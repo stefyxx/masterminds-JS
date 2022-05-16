@@ -124,3 +124,25 @@ console.log(dwarves);           //ƒ () { return 7; }
 
 let dwarvess = countDwarves();  // () is a function call
 console.log(dwarvess);          // 7   !!!!
+
+console.log("*************************");
+console.log(NaN === NaN )           // false -> errore storico, come console.log(typeOf(null)) -> obj
+console.log(Object.is(NaN,NaN));    //true
+
+console.log(typeof([[]]));     // obj
+console.log([[]]);     // array con a index 1 un array
+
+console.log([[]] == ''); // true
+console.log([] == ''); // true
+console.log(true == [1]); // true
+console.log(false == [0]); // true
+console.log(false == 0); // true
+
+//!!([0]) := reinversa due volte il valore, un modo + rapido di fare il casting (bool)
+console.log(false==!!([0])); // FALSE  
+
+var aaa = Boolean(0);        console.log(typeof(aaa)); //bool       console.log(aaa); //false    
+
+console.log("*************************");
+
+console.log({}.__proto__);

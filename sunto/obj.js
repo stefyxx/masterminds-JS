@@ -7,6 +7,7 @@ objectName['propertyName']
 var course = { name: "JS", lesson: 41 };
 document.write(course.name.length);
 
+
 /*creare un obj con il constructor (:= una function)*/
 var person = {
     name: "John", age: 42, favColor: "green"
@@ -39,7 +40,25 @@ console.log(p2['name']);  // Marc
 p2.changeName("Alex");
 console.log(p2['name']);  //Alex
 
-//altro es:
+//altro es method
+//person é il costruttore, infatti ha this.
+function person3(name, age) {
+    this.name = name;
+    this.age = age;
+    this.yearOfBirth = bornYear;  // non scrivo bornYear()
+}
+//bornYear é una funzione= method
+function bornYear() {
+    return new Date().getFullYear() - this.age;     // richiamo 'age' con this.
+
+    //NBB 'new' é un costruttore, quindi quando appello la func 'bornYear()' -> JS crea l'obj Date() et appella 'age'; ma alla fine dell'esecuzione della funzione DATE E' DISTRUTTO (x! valori primitivi, poiché il 'return' é un' espressione)
+}
+
+// ma per chiamare la prorpietà yearOfBirth SCRIVO ()
+var p3 = new person3("Al", 22);
+p3.yearOfBirth();   //ho messo le ()
+
+//altro es:  ///////////////////////////////////////////////////////////////////
 var prodID = "ddee";   //readLine();
 var price = 1700;      //parseInt(readLine(),10);
 var discount = 20;        //parseInt(readLine(),10);
@@ -59,23 +78,7 @@ function Product(prodID, price) {
     }
 }
 
-//altro es method
-//person é il costruttore, infatti ha this.
-function person3(name, age) {
-    this.name = name;
-    this.age = age;
-    this.yearOfBirth = bornYear;  // non scrivo bornYear()
-}
-//bornYear é una funzione= method
-function bornYear() {
-    return new Date().getFullYear() - this.age;     // richiamo 'age' con this.
-
-    //NBB 'new' é un costruttore, quindi quando appello la func 'bornYear()' -> JS crea l'obj Date() et appella 'age'; ma alla fine dell'esecuzione della funzione DATE E' DISTRUTTO (x! valori primitivi, poiché il 'return' é un' espressione)
-}
-
-// ma per chiamare la prorpietà yearOfBirth SCRIVO ()
-var p3 = new person3("Al", 22);
-p3.yearOfBirth();   //ho messo le ()
+//altro es:  ///////////////////////////////////////////////////////////////////
 
 //Nota: possiamo creare un obj, ma non possiamo distruggerlo; per questo un'app potrebbe usare molta memoria
 //pero' se creo un obj in una func, finito l'appello della func, cessa di vivere anche j'obj creato in essa, quindi é DISTRUTTO
@@ -89,26 +92,4 @@ for (let index = 0; index < 3; index++) {
     console.log({});     //{} NON é type primitive -> la console creerà 3 OBJ !!!
 }
 
-////// dove punta cosa:
-let bees = {};
-let peas = bees;
-let knees = {};
-/*
-bees -->{}
-         ^      bees et peas PUNTANOI LO STESSO obj
-peas   --|
-knees --> {}
-*/
-
-////// dove punta cosa: tree et flower fanno appello SEPARATAMENTE a plant 
-let plant = function () {
-    return {};
-};
-let tree = plant();
-let flower = plant();
-
-/*
-plant   --> ()
-tree    --> {}
-flower  --> {} 
-*/
+////// dove punta cosa:  obj_puntare.js

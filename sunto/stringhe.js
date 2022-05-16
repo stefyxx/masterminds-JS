@@ -16,6 +16,8 @@ function cambioLaPrima(parola) {
 }
 cambioLaPrima(reaction);
 
+
+
 // String methods:
 
 .slice(start, end not included); // se scrivo .slice(-4,-2); CONTA DALLA FINE
@@ -31,14 +33,17 @@ cambioLaPrima(reaction);
         let text = "Hello";
         const myArr = text.split(""); //["H","e","l","l","o"] ->ogni lettera é un elem
 
-"esempio".charAt(n° position);          -> return string
-"esempio".charCodeAt(n° position);  a   -> return UNICODE della lettera
-"esempio".codePointAt();
 "stringa uno".concat(stringa due);
         let text3 = text1.concat(" ", text2);
+        let hashtagName = '#'.concat(email.slice(0,email.indexOf('@')));
+
+.charAt(index carattere);          -> return string
+.charCodeAt(index carattere);  a   -> return UNICODE:= cone ASCHI della lettera
+.fromCharCode(n°,n°,n°);            -> da ASCHI return char/str (es: .fromCharCode(98,99))
+"esempio".codePointAt();
+.indexOf(carattere);
 "esempio".endsWith();
 "esempio".includes();
-"esempio".indexOf();
 "esempio".lastIndexOf();
 "esempio".length();
 "esempio".localeCompare();

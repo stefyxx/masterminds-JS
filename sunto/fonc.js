@@ -76,13 +76,16 @@ hello = (val) => "Hello " + val;
 hello = val => "Hello " + val;
 
 // Oject.prototype est un objet partagé par toutes les instances
+//'Personne()' is a function, is a contructor:
 function Personne(prenom, nom) {
     this.prenom = prenom;
     this.nom = nom;
 }
+//in this case, I add a method to constructor Personne
 Personne.prototype.nomComplet = function () {
     return this.prenom + ', ' + this.nom;
 }
+
 Personne.prototype.nomCompletInverse = function () {
     return this.nom + ', ' + this.prenom;
 }
