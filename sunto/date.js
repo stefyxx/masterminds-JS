@@ -12,13 +12,13 @@ new Date(year, month, day, hours, minutes, seconds, milliseconds);
 /* --- METHODS --- */
 d.getFullYear();    //aaaa    
 d.getMonth();       // 0 - 11   !!!!!
-d.getDate();        // gg
+d.getDate();        // gg    1-31
 d.getDay();         // 0 = domenica - 6 = sabato
 d.getHours();
 d.getMinutes();
 d.getSeconds();
-d.getMilliseconds();    //start: 01/01/1970       One day = 86 400 000 millisecond.
-d.getTime();
+d.getMilliseconds();  // 0-999  
+d.getTime();        //start: 01/01/1970       One day = 86 400 000 millisecond.
 
 let info = prompt("Please enter your year of birth");
 alert(`You are ${new Date().getFullYear() - parseInt(info)} years old`);
