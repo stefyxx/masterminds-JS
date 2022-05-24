@@ -72,7 +72,7 @@ x = 0;
 console.log(x);     //0
 console.log(y);     //10
 /* x --> 10         x punta a 10
-    y --> 10        y punta al valore di x: 10
+    y --> 10        y punta AL VALORE di x, e non a x perché y et x sono primitive type: 10
     x --> 0         ora x punta a 0
 */
 
@@ -146,3 +146,29 @@ var aaa = Boolean(0);        console.log(typeof(aaa)); //bool       console.log(
 console.log("*************************");
 
 console.log({}.__proto__);
+
+console.log("*************************");
+let moyenne = function () {
+    let somme = 0;
+    for (let i = 0, j = arguments.length; i < j; i++) {
+        somme += arguments[i];
+    }
+    return somme / arguments.length;
+};
+console.log("sono qui",moyenne(2,2,2,3,3));
+
+let division = function (a, b) {
+    let response;
+    if (b != 0) {
+        response = a / b;
+    }
+    else {
+        response = "infinity";
+    }
+    return response;
+}
+
+for (var i = 0; i < 10; i++) {
+    console.log("ora qui",division(10, i));
+}
+console.log("*************************");

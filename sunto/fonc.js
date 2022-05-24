@@ -7,8 +7,7 @@ hallo.call();
 /////////
 function greeting(name = "world") {
     console.log(`Hello, ${name}`);
-}
-
+};
 greeting();
 
 // 
@@ -29,6 +28,22 @@ let moyenne = function () {
     }
     return somme / arguments.length;
 };
+console.log(moyenne(2,2,2,3,3)); //se scrivo solo console.log(moyenne) -> in console mi appare scritta la func, il suon codice
+///////
+let division = function (a, b) {
+    let response;
+    if (b != 0) {
+        response = a / b;
+    }
+    else {
+        response = "infinity";
+    }
+    return response;
+}
+
+for (var i = 0; i < 10; i++) {
+    console.log(division(10, i));
+}
 
 // Fonctions récursives
 // Exemple de base
