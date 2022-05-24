@@ -5,6 +5,8 @@
 
 RETURN: sempre un ARRAY con gli elementi modificati dalla tua funzione:
     NB: se dimentichi di scrivere un return, il tuo nuovo array é riempito di UNDEFINED
+
+.map() non esegue la func su elementi vuoti
 */
 
 let vals = [1, 2, 3, 4, 5];
