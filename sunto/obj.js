@@ -45,7 +45,7 @@ console.log(p2['name']);  //Alex
 function person3(name, age) {
     this.name = name;
     this.age = age;
-    this.yearOfBirth = bornYear;  // non scrivo bornYear()
+    this.yearOfBirth = bornYear;  // non scrivo bornYear(), perché non l'appello (non si deve eseguire)
 }
 //bornYear é una funzione= method
 function bornYear() {
@@ -54,20 +54,14 @@ function bornYear() {
     //NBB 'new' é un costruttore, quindi quando appello la func 'bornYear()' -> JS crea l'obj Date() et appella 'age'; ma alla fine dell'esecuzione della funzione DATE E' DISTRUTTO (x! valori primitivi, poiché il 'return' é un' espressione)
 }
 
-// ma per chiamare la prorpietà yearOfBirth SCRIVO ()
+// ma per chiamare/appellare la proprietà yearOfBirth SCRIVO ()
 var p3 = new person3("Al", 22);
 p3.yearOfBirth();   //ho messo le ()
 
 //altro es:  ///////////////////////////////////////////////////////////////////
-var prodID = "ddee";   //readLine();
-var price = 1700;      //parseInt(readLine(),10);
-var discount = 20;        //parseInt(readLine(),10);
-
-var prod1 = new Product(prodID, price);
-console.log(prod1.prodID + " price: " + prod1.price);
-
-prod1.changePrice(discount);
-console.log(prod1.prodID + " new price: " + prod1.price);
+var prodID = "ddee";        //readLine();
+var price = 1700;           //parseInt(readLine(),10);
+var discount = 20;          //parseInt(readLine(),10);
 
 function Product(prodID, price) {
     this.prodID = prodID;
@@ -78,10 +72,17 @@ function Product(prodID, price) {
     }
 }
 
+var prod1 = new Product(prodID, price);
+console.log(prod1.prodID + " price: " + prod1.price);
+
+prod1.changePrice(discount);
+console.log(prod1.prodID + " new price: " + prod1.price);
+
+
 //altro es:  ///////////////////////////////////////////////////////////////////
 
 //Nota: possiamo creare un obj, ma non possiamo distruggerlo; per questo un'app potrebbe usare molta memoria
-//pero' se creo un obj in una func, finito l'appello della func, cessa di vivere anche j'obj creato in essa, quindi é DISTRUTTO
+//pero' se creo un obj in una func, finito l'appello della func, cessa di vivere anche l'obj creato in essa, quindi é DISTRUTTO
 
 //giusto una nota per sottolineare la diff tra valore primitivo e non
 

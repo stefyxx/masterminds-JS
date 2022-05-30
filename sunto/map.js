@@ -1,4 +1,4 @@
-    ////////////// CHE COS'é .map()  /////////////////////////
+////////////// CHE COS'é .map()  /////////////////////////
 //il method .map() puoi applicarlo solo a un ARRAY []
 /*
 é come un FOR : tu applichi una funzione a OGNI elemento del tuo array
@@ -28,7 +28,7 @@ const essay = vals.map(function (el, index, array) {
     //console.log(index);     //e suo index       0   1   2   3   4
     //console.log(array);     // sarà sempre 'vals'[1, 2, 3, 4, 5]
 });
-console.log("no retuon",essay);     //[undefined, undefined, undefined, undefined, undefined]
+console.log("no retuon", essay);     //[undefined, undefined, undefined, undefined, undefined]
 // PERCHE' NON HO STRITTO RETURN
 
 const essay2 = vals.map(function (el, index, array) {
@@ -63,7 +63,7 @@ utilisateurs.set("firstName","Laura");
 utilisateurs.set("lastName","Biagiotti");*/
 const usersAllName = utilisateurs.map(el => {
     const allName = el.firstName + " " + el.lastName;
-    const allName2 = [el.firstName,el.lastName].join(" ");
+    const allName2 = [el.firstName, el.lastName].join(" ");
     return allName;
 });
 console.log(usersAllName);      // ['Susan Ciccone', 'Giorgio Armani']
@@ -84,9 +84,9 @@ for (let i = 0; i < users.length; ++i) {
     usersWithAdmin[i] = Object.assign(users[i], { admin })
 }
 console.log(usersWithAdmin);
-  // l’output sarà
-  // [ { email: 'giovanni@gmail.com', display: 'giova38', admin: false },
-  //   { email: 'giangiorgio@toptech.com', display: 'giangi23', admin: true } ]
+// l’output sarà
+// [ { email: 'giovanni@gmail.com', display: 'giova38', admin: false },
+//   { email: 'giangiorgio@toptech.com', display: 'giangi23', admin: true } ]
 
 ///identico a: 
 const isUserAdmin = user => user.email.split('@')[1] === 'toptech.com';
@@ -121,4 +121,34 @@ esperimenti.map(e => e.costo).reduce((prec, succ) => prec + succ)
 
 
 // .map() lavora solo con array e return array
-//e se ho un obj di objs? {{..},{..},{..},...} -> Object.entries() 
+//e se ho un obj di objs? {{..},{..},{..},...} -> Object.entries() che trasforma obj in array
+
+//[{..}, {..}, {..}]
+const arrayObj = [[
+    'SEV011',
+    {
+        hour_cnt: 27,
+        day_cnt: 118,
+        year_cnt: 4108,
+        cnt_time: '2020/07/31 09:46:00'
+    }
+],
+[
+    'SJE181',                                   //key
+    {
+        hour_cnt: 8,                            //}
+        day_cnt: 163,                           //  }   value (é un obj)
+        year_cnt: 69016,                        //  } 
+        cnt_time: '2020/10/20 16:24:00'         //}    
+    }
+]];
+
+//OBJ IN MAP
+const obj1 = { foo: 'bar', baz: 42 };
+const map = new Map(Object.entries(obj1));
+console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
+
+
+/*Nota .map() -> return [{..obj modif da func..}, {..obj modif da func..}]
+    new Map() -> return { key => value, key => value }  dove value puo' essere {....}
+*/
