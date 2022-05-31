@@ -4,7 +4,7 @@ a[0] = "chien";
 a[1] = "chat";
 a[2] = "poule";
 a.length; // 3
-console.log(a[3]);    //undefined
+/* console.log(a[3]);    //undefined
 
 ['chien', 'chat', 'poule'].forEach(function (currentValue, index, array) {
   // Faire quelque chose avec currentValue ou array[index]
@@ -65,3 +65,52 @@ console.log(person.length); //-> 0   PERCHE' L'HO TRASFORMATO IN OBJ
 //sarebbe stato piu' appropriato:
 //var person = {};
 //var person = { name: "John", age: 42};  //-> person.name ->"John"
+
+////////////////////////////////////////////////////////////////////////////////////
+    //comparare 2 arrays:
+var a1 = ['a', 'b','e'];
+var a2 = ['a', 'b', 'c', 'd'];
+    //.include returns un bool
+    //.filter returns un array che matches alla CONDIZIONE 
+let intersection = a1.filter(element => a2.includes(element));   //['a', 'b']
+let diverso_a1 = a1.filter(element => !a2.includes(element));     //['e']
+
+  //trucchetto per avere un array con tutto quello non in comune:
+let notCommon = a1.filter(element => !a2.includes(element)).concat(a2.filter(element => !a1.includes(element)));  // ['e','c','d']
+  //
+let notCommon1 = a1.filter(element => !a2.includes(element)).concat(a2.filter(element => !a1.includes(element))).sort();  // ['c','d','e']
+
+console.log("not common sorted", notCommon1);
+*/
+  //problema con '.include' -> puo' solo cercare l'elemento INTERO
+  //se l'elemento é un obj, e bisogna controllare UNA sola property, bisogna usare anche .map =>
+/**
+ * @param {String} forma
+ * @param {String} colore
+ */
+function formaColore(forma, colore) {
+  return{
+    forma : forma,
+    colore : colore
+  }
+};
+
+const rotondoRosso = formaColore("rotondo","rosso");
+const rotondoVerde = formaColore("rotondo","verde");
+const quadratoRosso = formaColore("quadrato", "rosso");
+
+let arr1 = [rotondoRosso, rotondoVerde];
+let arr2 = [rotondoRosso, quadratoRosso];
+
+console.log("arr1",arr1); // [{forma: 'rotondo', colore: 'rosso'}, {forma: 'rotondo', colore: 'verde'}]
+
+  //.filter matcha solo il PRIMO riscontro
+  //se vuoi quello che non é in comune, NON DIMENTICARE in 'not' := !
+let nonInComune = arr1.filter(elemento=>{
+  if(!arr2.map(el=>{return el.colore}).includes(elemento.colore)) return elemento;
+})
+.concat(arr2.filter(elemento2 =>{
+  if(!arr1.map(el=>{return el.colore}).includes(elemento2.colore)) return elemento2;
+}));
+
+console.log("nonInComune",nonInComune);

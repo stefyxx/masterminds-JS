@@ -1,7 +1,7 @@
 //.filter()
 /*
 lo stesso di .map()
-RETURN un array di match;  no match -> return [];
+RETURN un ARRAY di matches;  no match -> return [];
 */
 
 const ages = [32, 33, 16, 40,55];

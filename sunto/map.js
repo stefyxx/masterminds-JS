@@ -1,3 +1,4 @@
+//import { poles } from "./poles";
 ////////////// CHE COS'é .map()  /////////////////////////
 //il method .map() puoi applicarlo solo a un ARRAY []
 /*
@@ -151,4 +152,24 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 /*Nota .map() -> return [{..obj modif da func..}, {..obj modif da func..}]
     new Map() -> return { key => value, key => value }  dove value puo' essere {....}
+*/
+//...................................................................................
+
+/*const totalCount = poles.reduce((acc, pole) => acc + pole.count, 0);
+console.log("poles con conto ....", )*/
+let today = new Date();
+let pole = {
+    history : {
+        date : today.toDateString(),        //posso usare la mia func del buon formato
+        count : 22
+    }
+}
+console.log("oggi: ", today);
+console.log("oggi in string: ", pole.history.date);
+/* func(stard, end){
+    if(start === pole.startDate && end <= pole.endDate){
+        pole.count += pole.count;  
+    }
+}
+
 */
