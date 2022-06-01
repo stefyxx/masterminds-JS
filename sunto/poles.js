@@ -1,3 +1,37 @@
+// Draft of Database Schema
+// -------------------------------------------------------------------------------------------------
+// date | hour | count | deviceId
+//
+// 20220527 | 1 | 33 | CSG301
+// 20220527 | 2 | 33 | CSG301
+// 20220527 | 23 | 33 | CSG301
+// 20220528 | 1 | 1 | CSG301
+
+//15:51:04.547 [traffic-bikepole-brussels]:
+const firstPole=  {
+  poleID: 'deviceCAT17',
+  poleName: 'CAT17',
+  addresses: {
+    nl: 'Veeweidekaai 11',
+    fr: 'Veeweidekaai 11',
+    en: 'Veeweidekaai 11'
+  },
+  startDate: 2022-05-31T17:50:00.000Z,
+  endDate: 2022-05-31T15:50:59.861Z,
+  count: 295,
+  AVG_speed: 0,
+  history: [
+    { date: '20220531', count: 266 },
+    { date: '20220531', count: 275 },
+    { date: '20220531', count: 286 },
+    { date: '20220531', count: 295 }
+  ],
+  updateCountPole: [Function (anonymous)]
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 export const poles = [
  {
 poleID: 'device.CAT17',

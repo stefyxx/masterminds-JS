@@ -18,3 +18,5 @@ const result2 = ages.filter(age => {
 console.log("result2", result2)
 
 // array.filter(function(currentValue, index, arr), this)
+
+// vedi anche array.js

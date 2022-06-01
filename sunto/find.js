@@ -56,3 +56,5 @@ RETURN o index, o -1 se no mach
     */
 const fruits = ["Orange", "Apple", "Mango", "Apple", "Banana", "Apple"];
 let index = fruits.lastIndexOf("Apple");    //5
+
+// vedi anche array.js
