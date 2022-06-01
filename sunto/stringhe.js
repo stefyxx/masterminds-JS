@@ -24,7 +24,7 @@ cambioLaPrima(reaction);
     //se scrivo un n°: da quello alla fine -> .slice(3,string.length) == .slice(3)
 .substring(start, end);
 .sudstr (start, length);
-.replace(una stringa/lettera, con questa stringa/lettera);//se ci sono + lettere, sostituisce SOLO la prima
+.replace(una stringa/lettera, con questa stringa/lettera);//se ci sono + lettere, sostituisce SOLO la PRIMA
     //NBBB MAIUSCOLA E MINUSCOLA SONO DIVERSE
     //per poter rimpiazzare TUTTI i casi, si utilizza l'espressione regolare '/.../g'
     .replace(/a/g,"i"); // -> sostituisci OGNI a con i

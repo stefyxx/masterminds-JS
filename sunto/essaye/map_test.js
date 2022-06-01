@@ -2,7 +2,7 @@
 const samMap = new Map();
 samMap.set("nom", "Legrain");
 samMap.set("prenom", "Samuel");
-console.log(samMap);
+//console.log(samMap);
 
 //Get the full name for each person:
 const persons = [
@@ -11,7 +11,7 @@ const persons = [
     { firstname: "Jayne", lastname: "Cobb" }
 ];
 
-console.log(persons.map(getFullName));
+//console.log(persons.map(getFullName));
 
 function getFullName(item) {
     return [item.firstname, item.lastname].join(" ");
@@ -52,3 +52,41 @@ var arrMap = new Map([
 obj.map((el) => {
     console.log(el);
 })*/
+
+let data = new Date("2022/06/01 12:21:00");
+console.log("data", data);
+console.log("tostring: ", data.toString());
+
+/* live
+{
+"requestDate": "2022/06/01 12:22:44",       -> endDate
+"feature": "CB2105",                        -> namePole
+"data": {
+    "hour_cnt": 41,                         -> count
+    "day_cnt": 849,
+    "year_cnt": 246034,
+    "cnt_time": "2022/06/01 12:21:00"       -> startDate
+    }
+}
+
+*/
+let dataAPIs = "2022/05/29";
+let result = "20220529";
+console.log("risultato data",dataAPIs.split("/").join(""));
+let d = new Date(2010, 7, 5);
+let miadata = new Date(2014, 4, 17);
+console.log("17/05/2014: ",miadata);
+/*
+"requestDate": "2022/06/01 12:48:20",
+"feature": "CB2105",
+"startDate": "2022/05/29",
+"endDate": "2022/05/31",
+"timeGaps": [],
+"data": [
+    {
+    "count_date": "2022/05/29",
+        "time_gap": 1,
+"count": 15,
+"average_speed": 20
+}
+*/
