@@ -55,9 +55,13 @@ obj.map((el) => {
 
 let data = new Date("2022/06/01 12:21:00");
 //console.log("data", data);
+let miadata = new Date(2014, 4, 17);
+//console.log("17/05/2014: ",miadata);
 let giorno = "2022/06/08 18:01:00";
 let az= giorno.split(" ")[1].substring(0,2);
-console.log("giorno: ", az);
+//console.log("giorno: ", az);
+giorno = "2022/06/09 23:26";
+//console.log("GIORNO :", giorno.split(" ")[0].split("/").join(""));
 
 /* live
 {
@@ -72,12 +76,7 @@ console.log("giorno: ", az);
 }
 
 */
-let dataAPIs = "2022/05/29";
-let result = "20220529";
-console.log("risultato data",dataAPIs.split("/").join(""));
-let d = new Date(2010, 7, 5);
-let miadata = new Date(2014, 4, 17);
-//console.log("17/05/2014: ",miadata);
+
 /*
 "requestDate": "2022/06/01 12:48:20",
 "feature": "CB2105",
@@ -93,6 +92,34 @@ let miadata = new Date(2014, 4, 17);
 }
 */
 
-let today = new Date();
-//console.log(today.toString().split(":")[1]);
-console.log(today.getMinutes().toString());
+let ob = {
+    "ARL_203": {
+        "results": {
+            "1m": {
+                "t1": {
+                    "count": 23,
+                    "speed": 76.5,
+                    "occupancy": 10.5,
+                    "start_time": "2022/06/09 17:54",
+                    "end_time": "2022/06/09 17:55"
+                },
+                "t2": {}
+            }
+        }
+    },
+    "BAI_TD1": {
+        "results": {
+            "1m": {
+                "t1": {
+                    "count": 36,
+                    "speed": 44.5,
+                    "occupancy": 27.5,
+                    "start_time": "2022/06/09 17:54",
+                    "end_time": "2022/06/09 17:55"
+                },
+                "t2": {}
+            }
+        }
+    },
+};
+console.log(ob.ARL_203.results["1m"].t1);
