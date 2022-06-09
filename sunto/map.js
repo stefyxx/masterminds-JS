@@ -117,10 +117,13 @@ console.log(nomiEsperimenti)
 // [ 'Large Hadron Collider', 
 //   'Vulcano di bicarbonato',
 //   'International Space Station' ]
-esperimenti.map(e => e.costo).reduce((prec, succ) => prec + succ)
+esperimenti.map(elemento => elemento.costo).reduce((prec, succ) => prec + succ)
 // output: 155000000003.5
+////////////
+// array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
 
 
+//////////
 // .map() lavora solo con array e return array
 //e se ho un obj di objs? {{..},{..},{..},...} -> Object.entries() che trasforma obj in array
 

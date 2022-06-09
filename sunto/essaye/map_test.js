@@ -54,8 +54,10 @@ obj.map((el) => {
 })*/
 
 let data = new Date("2022/06/01 12:21:00");
-console.log("data", data);
-console.log("tostring: ", data.toString());
+//console.log("data", data);
+let giorno = "2022/06/08 18:01:00";
+let az= giorno.split(" ")[1].substring(0,2);
+console.log("giorno: ", az);
 
 /* live
 {
@@ -75,7 +77,7 @@ let result = "20220529";
 console.log("risultato data",dataAPIs.split("/").join(""));
 let d = new Date(2010, 7, 5);
 let miadata = new Date(2014, 4, 17);
-console.log("17/05/2014: ",miadata);
+//console.log("17/05/2014: ",miadata);
 /*
 "requestDate": "2022/06/01 12:48:20",
 "feature": "CB2105",
@@ -90,3 +92,7 @@ console.log("17/05/2014: ",miadata);
 "average_speed": 20
 }
 */
+
+let today = new Date();
+//console.log(today.toString().split(":")[1]);
+console.log(today.getMinutes().toString());

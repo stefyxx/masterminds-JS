@@ -10,7 +10,7 @@ function greeting(name = "world") {
 };
 greeting();
 
-// 
+// sono i 3 ... che dicono di prendere da args ogni suo elemento
 function moyenne(...args) {
     let somme = 0;
     for (let valeur of args) {
@@ -20,6 +20,19 @@ function moyenne(...args) {
 }
 moyenne(2, 3, 4, 5); // 3.5
 
+        //i 3 puntini: spread operator := operatore di diffusione
+    const parola = "parola";
+    const letters = [...parola];
+    console.log(letters);   // ["p","a","r","o","l","a"]
+    const tab = ["ciao", "hallo", "ola"];
+    const tab2= ["ciaoo", "halloo", "olaà"];
+    const tabSpread = [...tab,...tab2];
+    console.log(tabSpread); // ["ciao", "hallo", "ola","ciaoo", "halloo", "olaà"]
+    const tabNoSpread = [tab, tab2];
+    console.log(tabNoSpread);       //[ ["ciao", "hallo", "ola"], ["ciaoo", "halloo", "olaà"] ] index 0 -> un array et index 1 -> l'altro array
+    const tabSiSpread = [tab, tab2].flat(); // diventa uguale a 'tabSpread'
+    //v sreadOperator.js anche
+////////////////////////////////////
 // Fonctions anonymes
 let moyenne = function () {
     let somme = 0;

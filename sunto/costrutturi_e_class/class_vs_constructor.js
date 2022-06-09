@@ -1,5 +1,5 @@
 //3 modi per scrivere la stessa cosa:                                       !!!! 3 IDENTICS WAYS  !!!!!
-    // 1) class: constructor(...params) + methods after constructor()
+// 1) class: constructor(...params) + methods after constructor()
 export class Pole {
     /**
      * @param {string} poleName
@@ -23,6 +23,10 @@ export class Pole {
         this.endDate = endDate;
         this.count = count;
         this.AVG_speed = AVG_speed;
+        /**
+     * @type {Object[]}
+     */
+        this.history = [];
     }
     /**
      * @param {Number} conto
@@ -33,13 +37,13 @@ export class Pole {
 
 }
 //.........................................................................................
-    /* 2) function: basic constructor(...params){
-            this.property = param;
+/* 2) function: basic constructor(...params){
+        this.property = param;
 
-                //methods:
-            this.nameFunction(){};   
-        }
-    */
+            //methods:
+        this.nameFunction(){};   
+    }
+*/
 
 /**
  * Constructor for a bike-pole (= device + live + history)
@@ -71,12 +75,12 @@ export function Pole(poleName, addressNl, addressFr, addressEn, startDate, endDa
 
 };
 //.........................................................................................
-    /* 3) function with EXPLICIT return: basic constructor(...params){
-        return{     
-            NOT this.   !!!!
-        }
+/* 3) function with EXPLICIT return: basic constructor(...params){
+    return{     
+        NOT this.   !!!!
+    }
 
-    */
+*/
 
 /**
  * Constructor for a bike-pole (= device + live + history)
@@ -89,7 +93,7 @@ export function Pole(poleName, addressNl, addressFr, addressEn, startDate, endDa
  * @param {Number} count
  * @param {Number} AVG_speed
  */
- function Pole(poleName, addressNl, addressFr, addressEn, startDate, endDate, count, AVG_speed) {
+function Pole(poleName, addressNl, addressFr, addressEn, startDate, endDate, count, AVG_speed) {
     return {
         poleID: "device.".concat(poleName),   //PAY ATTENTION: TO CONTROL IN DB IF THE 'id' IS AUTO-INCREASED  !!!
         poleName: poleName,
