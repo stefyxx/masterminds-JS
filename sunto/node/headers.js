@@ -89,3 +89,26 @@ async function essaye2(startDate, endDate) {
         }),
     }).then(response => response.json()).then(data => {return data}).catch(error => console.debug(error));
 }
+
+//NOTA BENE:
+/*
+se in una REQUEST ho bisogno di aggiungere nell'headers un token alla key d'autorizzazione
+quasi certamente NON verrà memorizzato anche nell'headers della RESPONSE
+Ossia
+*/
+async function ilLogIsNull(token) {
+    const URL= "http: la mia APIs";
+    return fetch(URL,{
+        method:'GET', //se APIs fonziona cosi'
+        headers: new Headers({
+            'Authorization': token,
+        })
+    }).then(response=>{
+        response.json();
+        const contentType = response.headers.get('Content-Type');
+        console.log(contentType);       //application/json
+        const authorizzation = response.headers.get('Authorization');
+        console.log('Content-type');    //null !!!!! e infatti NON la DEVO conservare
+
+    }).then(data=>{return data}).catch(error=>{console.debug(error)});
+}
