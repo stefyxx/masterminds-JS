@@ -22,7 +22,7 @@ a.shift() // Renvoie le premier élément du tableau et le retire du tableau.
 a.unshift(item1[, item2[, ...[, itemN]]]) // Ajoute des éléments au début du tableau.
 a.slice(start[, end]) // Renvoie un sous-tableau.
 a.sort([cmpfn]) // Trie le tableau (avec une fonction de comparaison optionnelle).
-a.splice(start, delcount[, item1[, ...[, itemN]]]) // Permet de modifier un tableau en en supprimant une partie et en la remplaçant avec plus d'éléments.
+a.splice(start, delcount[, item1[, ...[, itemN]]]) // Permet de modifier un tableau en supprimant une partie et en la remplaçant avec plus d'éléments.
 a.reverse() // Retourne le tableau.
 
 //* Array map()
@@ -100,11 +100,23 @@ const rotondoVerde = formaColore("rotondo","verde");
 const quadratoRosso = formaColore("quadrato", "rosso");
 
 let arr1 = [rotondoRosso, rotondoVerde];
+  /*
+  =[
+    {
+      forma: "rotondo",
+      colore: "rosso"
+    },
+    {
+      forma: "rotondo",
+      colore: "verde"
+    },
+  ]
+  */
 let arr2 = [rotondoRosso, quadratoRosso];
 
 console.log("arr1",arr1); // [{forma: 'rotondo', colore: 'rosso'}, {forma: 'rotondo', colore: 'verde'}]
 
-  //.filter matcha solo il PRIMO riscontro
+  //.find matcha solo il PRIMO riscontro
   //se vuoi quello che non é in comune, NON DIMENTICARE in 'not' := !
 let nonInComune = arr1.filter(elemento=>{
   if(!arr2.map(el=>{return el.colore}).includes(elemento.colore)) return elemento;
