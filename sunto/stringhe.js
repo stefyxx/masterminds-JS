@@ -20,10 +20,10 @@ cambioLaPrima(reaction);
 
 // String methods:
 
-.slice(start, end not included); // se scrivo .slice(-4,-2); CONTA DALLA FINE
+.slice(start, end not included); //Prendi da: se scrivo .slice(-4,-2); CONTA DALLA FINE
     //se scrivo un n°: da quello alla fine -> .slice(3,string.length) == .slice(3)
-.substring(start, end);
-.sudstr (start, length);
+.substring(start, end);     //Prendi da
+.sudstr (start, length);    //Prendi da
 .replace(una stringa/lettera, con questa stringa/lettera);//se ci sono + lettere, sostituisce SOLO la PRIMA
     //NBBB MAIUSCOLA E MINUSCOLA SONO DIVERSE
     //per poter rimpiazzare TUTTI i casi, si utilizza l'espressione regolare '/.../g'
@@ -38,7 +38,7 @@ cambioLaPrima(reaction);
         let hashtagName = '#'.concat(email.slice(0,email.indexOf('@')));
 
 .charAt(index carattere);          -> return string
-.charCodeAt(index carattere);  a   -> return UNICODE:= cone ASCHI della lettera
+.charCodeAt(index carattere);      -> return UNICODE:= cone ASCHI della lettera
 .fromCharCode(n°,n°,n°);            -> da ASCHI return char/str (es: .fromCharCode(98,99))
 "esempio".codePointAt();
 .indexOf(carattere);
