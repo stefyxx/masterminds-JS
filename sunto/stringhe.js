@@ -47,7 +47,7 @@ cambioLaPrima(reaction);
 "esempio".lastIndexOf();
 "esempio".length();
 "esempio".localeCompare();
-"esempio".match(espressione regolare); //maccia la prima
+"esempio".match('espressione regolare'); //ritorna un array con l'espressione regolare ripetuta quante volte é stata trovata
 "esempio".matchAll();           //maccia tutte
 "esempio".repeat();
 "esempio".search();
