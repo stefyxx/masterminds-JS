@@ -112,3 +112,6 @@ let jane = {
 };
 
 console.log(daria.address.city); // L.A.
+
+
+// v. foreach.js
