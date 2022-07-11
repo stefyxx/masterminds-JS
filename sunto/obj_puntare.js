@@ -1,4 +1,6 @@
+//NBB se NON voglio modificare l'array di partenza, lo spread Operator mi viene in aiuto 
 // 1) obj creato ex-novo:
+//#region semplivi esempi
 for (let index = 0; index < 3; index++) {
     console.log(2);     //2 é type primitive -> la console punterà x 3 volte al n° 2
 }
@@ -29,7 +31,9 @@ plant   --> ()
 tree    --> {}
 flower  --> {} 
 */
+//#endregion
 
+//#region perché modifico l'obj di partenza ! v soprattutto l'ultimo es
 ////// dove punta cosa:
 let sherlock = {
     surname: 'Holmes',
@@ -51,8 +55,8 @@ console.log(sherlock.address.city); // Malibu   !!!!  //questo perché john.addr
 // sherlock -> {} --address(nome del cavo)--> {} --city(nome del cavo)-->  "..."
 // john -> {} --address(nome del cavo)--> {} --city(nome del cavo)--> sherlock -> {} --address(nome del cavo)--> {} --city(nome del cavo)-->  "..." 
 
-    console.log(sherlock.board);        //undefined := la property 'board' non punta ad ALCUN valore 
-    console.log(sherlock.board.name);   //undefined.name := TypeError -> Le regole dicono che null o undefined sul lato sinistro è un errore
+console.log(sherlock.board);        //undefined := la property 'board' non punta ad ALCUN valore 
+console.log(sherlock.board.name);   //undefined.name := TypeError -> Le regole dicono che null o undefined sul lato sinistro è un errore
 
 ////// dove punta cosa:
 let batman = {
@@ -80,7 +84,21 @@ citta = 'Malibu';       //punta al nuovo valore
 console.log(sherlockk.address.city); //London       //qui' non cambia perché resta puntato sul suo valore, non fa nessun cammino passando dall'obj
 //QUESTO E' QUANDO DICONO CHE NELLA PROPERTY sherlockk.address.city E'MEMOROZZATA UNA COPIA DI citta
 
+////// dove punta cosa:
+let daria = {
+    address: { city: 'Lawndale' }
+};
+let place = daria.address;
+place.city = 'L.A.';
+let jane = {
+    address: place
+};
 
+console.log(daria.address.city); // L.A.
+
+//#endregion
+
+//#region un ERRORE non insolito -> creo una key TROPPO PRESTO:
 ////// dove punta cosa:
 
 //  non corretto:
@@ -99,19 +117,20 @@ const copy = spreadsheet;
 copy.title = copy.title + ' (Copy)';
 
 console.log(spreadsheet.title);     //Sales (copy)  //entrambe puntano allo stesso obj
+//#endregion
 
+//#region come NON modificare l'array di partenza -> spread Operator:
+//se ho bisogno di fare delle operazioni su un array SENZA modificarlo -> posso creare una sua copia perfetta con spread operator:
+let routesArray = await getAllMyRoutes();
+let routesArrayCopy = [...routesArray];     //-> mi permette di non chiaiare 2 volte una funz ASYNCRON
 
-////// dove punta cosa:
-let daria = {
-    address: { city: 'Lawndale' }
-};
-let place = daria.address;
-place.city = 'L.A.';
-let jane = {
-    address: place
-};
+//non solo, protrei aggiungere delle properties:
+myArray = myArray.map(el => ({
+    ...el,                          // -> prendi di ogni 'el' quello che aveva già
+    newProperty: myFunction(el),
+    anotherProperty: "quello che mi pare"
 
-console.log(daria.address.city); // L.A.
-
+}));
+//#endregion
 
 // v. foreach.js

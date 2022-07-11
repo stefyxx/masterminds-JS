@@ -1,5 +1,6 @@
 //import { poles } from "./poles";
-////////////// CHE COS'é .map()  /////////////////////////
+//#region       CHE COS'é .map() 
+
 //il method .map() puoi applicarlo solo a un ARRAY []
 /*
 é come un FOR : tu applichi una funzione a OGNI elemento del tuo array
@@ -41,8 +42,9 @@ const essay2 = vals.map(function (el, index, array) {
 });
 
 console.log(essay2);        //[0, 1, 2, 3, 4]
+//#endregion
 
-////////// THIS/////
+//#region       ////// THIS/////
 const vals2WithThis = vals.map(function (el) {
     return el * this;
 }, 2);
@@ -53,12 +55,15 @@ const vals2WithThis2 = vals.map(el => {
     return el * this;
 }, 2);
 console.log("vals2 con this: ", vals2WithThis2);     // [NaN, NaN, NaN, NaN, NaN]
+//#endregion
 
 ///////// es con array di objs:
 const utilisateurs = [
     { firstName: "Susan", lastName: "Ciccone" },
     { firstName: "Giorgio", lastName: "Armani" }
 ];
+
+// NON CONFONDERE .map() -> method d'iterazione     et new Map() -> constructor -> mi crea un obj    key: value
 /* solo se scrivo let utilisateurs = new Map();
 utilisateurs.set("firstName","Laura");
 utilisateurs.set("lastName","Biagiotti");*/
@@ -176,3 +181,29 @@ console.log("oggi in string: ", pole.history.date);
 }
 
 */
+
+//#region  --- Paragonare due array in modo piu' chiaro --- 
+//Con il passare del tempo, non ricorderai piu' che property racchiudeva cosa , ect.. e allora diventa basilare lavorare oin modo che sia piu' semplice capirci qualcosa:
+//Caso in cui devi paragonare due array dove le key-properties hanno nomi differenti:
+// FURBIZIA  -> CREA DUE ARRAY CON LE PROPERTYES CHE SI CHIAMANO ALLA STESSA MANIERA
+//il mùio amico .map mi velocizza le cose
+fistAllRoutesFromAPIa = fistAllRoutesFromAPIa.map(el => {
+    return {
+        id: el.lijnnummer,
+        shortName: el.lijnnummerPubliek,
+        longName: el.omschrijving,
+        description: el.omschrijving,
+    };
+});
+secondAllRoutesFromAPIb = secondAllRoutesFromAPIb.map(el => {
+    return {
+        id: el.monID,
+        shortName: el.nomTitre,
+        longName: el.maDescription,
+        description: el.maLongDescriptio,
+    };
+});
+
+//e il mio foreach sarà semplice ;)
+
+//#endregion
