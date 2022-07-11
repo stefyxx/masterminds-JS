@@ -11,7 +11,7 @@ a.length; // 3
 });
 
 // Methods array
-a.push(item); // Ajouter un élément à un tableau
+a.push(item); // Ajouter a la fin un élément à un tableau
 a.toString() // Renvoie une chaîne composée des différents éléments auxquels on a appliqué toString(), séparés par des virgules.
 a.concat(item1[, item2[, ...[, itemN]]]) // Renvoie un nouveau tableau auquel on a ajouté les éléments.
 array1.concat(array2) // Renvoie un nouveau tableau auquel on a ajouté les éléments.
@@ -20,7 +20,7 @@ a.pop() // 	Renvoie le dernier élément du tableau et le retire du tableau.
 a.push(item1, ..., itemN) // Ajoute un ou plusieurs éléments à la fin du tableau.
 a.shift() // Renvoie le premier élément du tableau et le retire du tableau.
 a.unshift(item1[, item2[, ...[, itemN]]]) // Ajoute des éléments au début du tableau.
-a.slice(start[, end]) // Renvoie un sous-tableau.
+a.slice(start[, end]) //NON MODIFICA l'array di partenza(ossia 'a'), Renvoie un sous-tableau da index start a end ESCLUSO .
 a.sort([cmpfn]) // Trie le tableau (avec une fonction de comparaison optionnelle).
 a.splice(start, delcount[, item1[, ...[, itemN]]]) // Permet de modifier un tableau en supprimant une partie et en la remplaçant avec plus d'éléments.
 a.reverse() // Retourne le tableau.
