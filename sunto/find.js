@@ -61,6 +61,30 @@ let index = fruits.lastIndexOf("Apple");    //5
 
 // vedi anche array.js
 
+/////////////////////////////////////////////////////////////////////////
+const enumType = {
+    0: 'Tram',
+    1: 'Subway',
+    3: 'Bus',
+}
+
+//console.log(enumType[3]);
+
+const value = 'Bus';
+const key = '0'; // opp 0
+
+
+//const el = Object.getOwnPropertyDescriptor(enumType, key);
+//console.log("el: ", el);
+//{value: 'Tram', writable: true, enumerable: true, configurable: true}
+
+//console.log(Object.hasOwn(enumType,key))
+const keys = Object.keys(enumType);
+const myKey = keys.find(key => enumType[key] === value)
+console.log(myKey);
+console.log(Object.keys(enumType).find(key => enumType[key] === value))
+//////////////////////////////////////////////////////////////////////////
+
 /**
  * Dato un array di objs
  * posso ritornare l'array di doppioni
@@ -99,7 +123,7 @@ function findAndReportDuplicates(arrayElements, report) {
  */
 function removeDuplicatedElements(arrayElements) {
     const arrayElementsWithoutDuplicates = [];
-    routes.forEach(el => {
+    arrayElements.forEach(el => {
         //se in 'routesWithoutDuplicates' non trovi la route che corrisponde alla condiz dell'if -> ossia !false (che é = a true )
         if (!arrayElementsWithoutDuplicates.find(element => element.id === el.id && element.shortName === el.shortName)) {
             arrayElementsWithoutDuplicates.push(el);
@@ -107,3 +131,29 @@ function removeDuplicatedElements(arrayElements) {
     });
     return arrayElementsWithoutDuplicates;
 }
+
+//#region   Stop not found without duplicated
+let StopsStibNotFound = [];
+
+
+//StopsStibNotFound without duplicated:
+let copy_StopsStibNotFound = [...StopsStibNotFound];
+/**
+ * @type {any[]}
+ */
+let StopsStibNotFound_withoutDuplicated = [];
+StopsStibNotFound.map(current => {
+    copy_StopsStibNotFound.shift();
+    const found = copy_StopsStibNotFound.find(el => el.id === current.id);
+    if (!found) StopsStibNotFound_withoutDuplicated.push(current);
+})
+
+//________________________
+
+//oppure direttamente non li metto :
+if (stopObj === undefined && !StopsStibNotFound.find(el => el.id === elStop.id)) {
+    //console.log('stop Stib not found :', elStop );
+    StopsStibNotFound.push(elStop);
+    //console.log(StopsStibNotFound.length)
+}
+//#endregion
